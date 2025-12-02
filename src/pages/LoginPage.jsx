@@ -21,7 +21,7 @@ function LoginPage() {
 
     const success = await login(email, password);
     if (success) {
-      navigate('/');
+      navigate('/dashboard');
     } else {
       setError('Feil e-post eller passord');
     }
@@ -32,12 +32,7 @@ function LoginPage() {
       <div className="w-full max-w-md">
         {/* Logo og tittel */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl mb-4 shadow-lg shadow-primary-200">
-            <span className="text-white font-bold text-2xl">K</span>
-          </div>
-          <h1 className="font-display text-3xl font-bold text-neutral-800">
-            Krysselista
-          </h1>
+          <img src="/logo.png" alt="Henteklar" className="h-16 w-auto mx-auto mb-4" />
           <p className="text-neutral-500 mt-2">
             Logg inn for å fortsette
           </p>

@@ -113,7 +113,7 @@ function SettingsPage() {
 
       {/* App Info */}
       <div className="text-center text-sm text-neutral-400 py-4">
-        <p>Krysselista v1.0.0</p>
+        <p>Henteklar v1.0.0</p>
         <p>© 2024 FrostByte AS</p>
       </div>
     </div>

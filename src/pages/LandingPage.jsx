@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { 
-  CheckCircle, 
   Shield, 
   Smartphone, 
   Clock,
@@ -39,12 +38,7 @@ function LandingPage() {
       <header className="px-4 sm:px-6 lg:px-8 py-4">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-xl">K</span>
-            </div>
-            <span className="font-display font-bold text-xl text-neutral-800">
-              Krysselista
-            </span>
+            <img src="/logo.png" alt="Henteklar" className="h-10 w-auto" />
           </div>
           <Link to="/login" className="btn-primary">
             Logg inn
@@ -61,9 +55,8 @@ function LandingPage() {
               For barnehager
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-800 mb-6">
-              Enkel og trygg{' '}
-              <span className="text-primary-600">inn- og utsjekking</span>{' '}
-              for barnehagen
+              Hent barnet ditt på{' '}
+              <span className="text-primary-400">1-2-3</span>
             </h1>
             <p className="text-lg sm:text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
               Erstatt det gamle Excel-arket med en moderne, sikker løsning. 
@@ -85,13 +78,13 @@ function LandingPage() {
             <div className="bg-white rounded-3xl shadow-soft border border-neutral-200 p-4 sm:p-6 max-w-4xl mx-auto">
               <div className="bg-neutral-100 rounded-2xl p-6 sm:p-8">
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-accent-300 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-primary-400 rounded-full"></div>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-white rounded-xl p-4 shadow-card">
-                    <div className="text-3xl font-bold text-primary-600">12</div>
+                    <div className="text-3xl font-bold text-primary-500">12</div>
                     <div className="text-sm text-neutral-500">Barn inne</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-card">
@@ -99,7 +92,7 @@ function LandingPage() {
                     <div className="text-sm text-neutral-500">Sjekket inn i dag</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-card">
-                    <div className="text-3xl font-bold text-accent-600">4</div>
+                    <div className="text-3xl font-bold text-accent-400">4</div>
                     <div className="text-sm text-neutral-500">Hentet</div>
                   </div>
                 </div>
@@ -125,7 +118,7 @@ function LandingPage() {
             {features.map((feature, index) => (
               <div key={index} className="card-hover p-6">
                 <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-primary-600" />
+                  <feature.icon className="w-6 h-6 text-primary-500" />
                 </div>
                 <h3 className="font-display font-semibold text-xl text-neutral-800 mb-2">
                   {feature.title}
@@ -142,7 +135,7 @@ function LandingPage() {
       {/* CTA Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-primary-600 rounded-3xl p-8 sm:p-12 text-center">
+          <div className="bg-primary-400 rounded-3xl p-8 sm:p-12 text-center">
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4">
               Klar til å forenkle hverdagen?
             </h2>
@@ -161,10 +154,7 @@ function LandingPage() {
       <footer className="px-4 sm:px-6 lg:px-8 py-8 border-t border-neutral-200">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">K</span>
-            </div>
-            <span className="font-display font-semibold text-neutral-800">Krysselista</span>
+            <img src="/logo.png" alt="Henteklar" className="h-8 w-auto" />
           </div>
           <p className="text-sm text-neutral-500">
             © 2024 FrostByte AS. Alle rettigheter reservert.

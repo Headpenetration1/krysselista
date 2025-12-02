@@ -1,16 +1,101 @@
-# React + Vite
+# Henteklar 🏫
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hent barnet ditt på 1-2-3. Digital inn- og utsjekking for barnehager.
 
-Currently, two official plugins are available:
+## Om prosjektet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dette er frontend-delen av Henteklar, utviklet for FrostByte AS. Løsningen lar foreldre og ansatte sjekke barn inn/ut av barnehagen på en enkel og sikker måte.
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** - UI-bibliotek
+- **Vite** - Byggverktøy (raskere enn Create React App)
+- **Tailwind CSS** - Styling
+- **React Router** - Navigasjon
+- **PWA** - Installerbar som app på mobil
 
-## Expanding the ESLint configuration
+## Kom i gang
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Klon repoet
+```bash
+git clone https://github.com/Headpenetration1/krysselista.git
+cd krysselista
+```
+
+### 2. Installer dependencies
+```bash
+npm install
+```
+
+### 3. Start utviklingsserver
+```bash
+npm run dev
+```
+
+Åpne http://localhost:5173 i nettleseren.
+
+## Mappestruktur
+
+```
+src/
+├── components/       # Gjenbrukbare komponenter
+│   └── layout/       # Header, navigasjon osv.
+├── context/          # React Context (auth state)
+├── data/             # Mock-data for testing
+├── pages/            # Alle sidene i appen
+│   ├── LandingPage.jsx
+│   ├── LoginPage.jsx
+│   ├── DashboardPage.jsx
+│   ├── CheckInOutPage.jsx
+│   ├── ChildProfilePage.jsx
+│   └── SettingsPage.jsx
+├── App.jsx           # Hovedkomponent med routing
+├── main.jsx          # Entry point
+└── index.css         # Global CSS + Tailwind
+```
+
+## Sider
+
+| Side | URL | Beskrivelse |
+|------|-----|-------------|
+| Landingsside | `/` | Forklarer hva appen er |
+| Login | `/login` | Innlogging |
+| Oversikt | `/dashboard` | Statistikk og barneliste |
+| Sjekk inn/ut | `/dashboard/sjekk` | Hovedfunksjon |
+| Barneprofil | `/dashboard/barn/:id` | Kontaktinfo |
+| Innstillinger | `/dashboard/innstillinger` | Profil og preferanser |
+
+## PWA (Progressive Web App)
+
+Appen kan installeres på mobil:
+- **iPhone**: Åpne i Safari → Del → "Legg til på Hjem-skjerm"
+- **Android**: Åpne i Chrome → Du får popup "Installer app"
+
+## Scripts
+
+- `npm run dev` - Start utviklingsserver
+- `npm run build` - Bygg for produksjon
+- `npm run preview` - Forhåndsvis produksjonsbygg
+
+## For UX-gruppa
+
+Designsystemet ligger i:
+- `tailwind.config.js` - Farger, fonts, spacing
+- `src/index.css` - Komponentklasser (btn, card, badge osv.)
+
+Fargepaletten:
+- **Primary (mint/teal)** - Hovedfarge, knapper, lenker
+- **Accent (korall/rød)** - Fra logoen, fremhevinger  
+- **Success (grønn)** - "Inne", positive handlinger
+- **Neutral (grå)** - Tekst, bakgrunner, borders
+
+## TODO
+
+- [ ] Koble til backend/database
+- [ ] Implementere ekte autentisering
+- [ ] Legge til flerspråklig støtte (i18n)
+- [ ] Testing
+
+---
+
+Laget av UX-gruppa i PRO203 🚀

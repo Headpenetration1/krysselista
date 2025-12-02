@@ -17,13 +17,13 @@ function Layout() {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   const navItems = [
-    { to: '/', icon: LayoutDashboard, label: 'Oversikt' },
-    { to: '/sjekk', icon: UserCheck, label: 'Sjekk inn/ut' },
-    { to: '/innstillinger', icon: Settings, label: 'Innstillinger' },
+    { to: '/dashboard', icon: LayoutDashboard, label: 'Oversikt' },
+    { to: '/dashboard/sjekk', icon: UserCheck, label: 'Sjekk inn/ut' },
+    { to: '/dashboard/innstillinger', icon: Settings, label: 'Innstillinger' },
   ];
 
   return (
@@ -34,12 +34,7 @@ function Layout() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-primary-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">K</span>
-              </div>
-              <span className="font-display font-bold text-xl text-neutral-800">
-                Krysselista
-              </span>
+              <img src="/logo.png" alt="Henteklar" className="h-9 w-auto" />
             </div>
 
             {/* Desktop Navigation */}
@@ -48,7 +43,7 @@ function Layout() {
                 <NavLink
                   key={item.to}
                   to={item.to}
-                  end={item.to === '/'}
+                  end={item.to === '/dashboard'}
                   className={({ isActive }) =>
                     `flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-colors ${
                       isActive

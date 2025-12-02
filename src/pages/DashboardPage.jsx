@@ -35,7 +35,7 @@ function StatCard({ icon: Icon, label, value, color }) {
 function ChildListItem({ child }) {
   return (
     <Link
-      to={`/barn/${child.id}`}
+      to={`/dashboard/barn/${child.id}`}
       className="card-hover flex items-center justify-between p-4 group"
     >
       <div className="flex items-center gap-4">
